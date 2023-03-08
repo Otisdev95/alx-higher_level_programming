@@ -7,7 +7,7 @@ if number < 0:
     print("Last digit of {} is {} and is ".format(number, digit), end="")
 if digit > 5:
     print("Last digit of {} is {} and is greater \
-            than 5".format(number, digit), end="")
+than 5".format(number, digit), end="")
 elif digit == 0:
     print("Last digit of {} is {} and is 0".format(number, digit), end="")
 else:
