@@ -2,7 +2,6 @@
 """module for a singly linked list"""
 
 
-
 class Node:
     """defines a node"""
 
