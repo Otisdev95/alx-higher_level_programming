@@ -46,7 +46,7 @@ The function can also handle floating-point numbers.
 	...     [4.4, 5.5, -6.6]
 	... ]
 	>>> print(matrix_divided(matrix, 3))
-	[[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]1~
+	[[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
 
 Integers and floats can be combined.
 
