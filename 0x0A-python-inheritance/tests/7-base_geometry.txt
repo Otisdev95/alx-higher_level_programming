@@ -1,0 +1,44 @@
+7-base_geometry.txt
+===================
+
+
+Importing function from the module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for Class Type test:
+	>>> bg = BaseGeometry()
+	>>> type(bg) == BaseGeometry
+	True
+
+Checking for class docstring:
+	>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+	>>> len(c) > 1
+	True
+
+
+integer_validator() instance method
+-----------------------------------
+
+integer_validator method string value:
+	>>> bg.integer_validator("val", "crest")
+	Traceback (most recent call last):
+		...
+	TypeError: val must be an integer
+
+integer_validator method list value:
+	>>> bg.integer_validator("boy", [4])
+	Traceback (most recent call last):
+		...
+	TypeError: boy must be an integer
+
+integer_validator method negative value:
+	>>> bg.integer_validator("boy", -20)
+	Traceback (most recent call last):
+		...
+	ValueError: boy must be greater than 0
+
+integer_validator method with class and no args:
+	>>> bg.__class__.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
