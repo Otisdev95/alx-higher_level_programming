@@ -4,7 +4,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """ 
+    """
         Def of the class that inherits the BaseGeometry
         Instantiation:
             width (int): Width of the Rectangle.
@@ -29,5 +29,5 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """ Return and Print the Rectangle description """
 
-        return "[{}] {}/{}".format(type(self).__name__, self.__width,
-                                                    self.__height)
+        return "[{}] {}/{}".format(type(self).__name__,
+                                    self.__width, self.__height)
