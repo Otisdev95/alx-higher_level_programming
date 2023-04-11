@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
     Module with a class MyList
     that inherits from list
 """

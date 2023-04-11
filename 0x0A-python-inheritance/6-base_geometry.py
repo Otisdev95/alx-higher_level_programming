@@ -6,7 +6,7 @@ class BaseGeometry:
     """ Defination of the class BaseGeomety """
 
     def area(self):
-        """ 
+        """
             Public instance method that raises an
             Exception with a message
         """
