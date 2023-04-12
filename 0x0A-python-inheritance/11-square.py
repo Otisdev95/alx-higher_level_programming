@@ -23,5 +23,5 @@ class Square(Rectangle):
             Prints and returns the Square
             description in string representation
         """
-        return "[{}] {}/{}".format(type(self).__name__, self.__size,
-                self.__size)
+        return "[{}] {}/{}".format(
+                        type(self).__name__, self.__size, self.__size)
