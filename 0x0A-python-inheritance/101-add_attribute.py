@@ -2,7 +2,7 @@
 """ Module that adds new attribute to object """
 
 
-def add_new_attribute(obj, name, value):
+def add_attribute(obj, name, value):
     """ Def the method for adding the new attribute """
 
     if hasattr(obj, "__dict__"):
