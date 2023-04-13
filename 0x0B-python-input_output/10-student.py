@@ -17,7 +17,7 @@ class Student:
             If attrs is a list of strings, only attribute
             names contained in this list must be retrieved
         """
-        if attrs!=None:
-            strings = {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
-            return strings
+        if attrs is not None:
+            sList = {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
+            return sList
         return self.__dict__
