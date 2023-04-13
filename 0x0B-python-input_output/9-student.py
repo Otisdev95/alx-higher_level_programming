@@ -2,7 +2,7 @@
 """Module with class student define by public attributes"""
 
 
-class student:
+class Student:
     """ class that defines student by public attributes """
 
     def __init__(self, first_name, last_name, age):
