@@ -29,7 +29,7 @@ class Base:
         """methods that writes JSON str rep of list_objs to a file"""
         fileName = cls.__name__ + ".json"
         if list_objs is None:
-            return list_dict = []
+            list_dict = []
         else:
             list_dict = [obj.to_dictionary() for obj in list_objs]
         with open(fileName, 'w') as fn:
@@ -59,11 +59,12 @@ class Base:
         """method that returns a list of instances"""
         fileName = "{}.json".format(cls.__name__)
         ins = []
+        dictList = []
 
         if os.path.exists(fileName):
-            with open(fileName) as fn:
-                json_string = fn.read()
-                dict_list = cls.from_json_string(json_string)
-                for dic in dict_list:
+            with open(fileName, 'r') as fn:
+                j_str = fn.read()
+                dictList = cls.from_json_string(j_str)
+                for dic in dictList:
                     ins.append(cls.create(**dic))
         return ins

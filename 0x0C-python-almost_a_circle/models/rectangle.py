@@ -3,6 +3,7 @@
     Module with class Rectangle inheriting
     from the super class Base
 """
+
 from models.base import Base
 
 
@@ -17,13 +18,13 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    #getter function for width
+    # getter function for width
     @property
     def width(self):
         """width getter function"""
         return (self.__width)
 
-    #setter function for width
+    # setter function for width
     @width.setter
     def width(self, newWidthValue):
         """width setter function"""
@@ -35,12 +36,13 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = newWidthValue
 
-    #getter function for height
+    # getter function for height
+    @property
     def height(self):
         """height getter function"""
         return (self.__height)
 
-    #setter function for height
+    # setter function for height
     @height.setter
     def height(self, newHeightValue):
         """height setter function"""
@@ -52,12 +54,13 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = newHeightValue
 
-    #getter function for x
+    # getter function for x
+    @property
     def x(self):
         """x getter function"""
         return (self.__x)
 
-    #setter function for x
+    # setter function for x
     @x.setter
     def x(self, newX):
         """ x setter function"""
@@ -69,12 +72,13 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = newX
 
-    #getter function for y
+    # getter function for y
+    @property
     def y(self):
         """y getter function"""
         return (self.__y)
 
-    #setter function for y
+    # setter function for y
     @y.setter
     def y(self, newY):
         """ y setter function"""
@@ -103,7 +107,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """def that returns the string format of Rectange"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(\
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
@@ -113,38 +117,37 @@ class Rectangle(Base):
             for arg in args:
                 if a == 0:
                     if arg is None:
-                    self.__init__(self.__width, self.__height, self.__x, self.__y)
-                else:
-                    self.id = arg
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
                 elif a == 1:
-                    self.__width = arg
+                    self.width = arg
                 elif a == 2:
-                    self.__height = arg
+                    self.height = arg
                 elif a == 3:
-                    self.__x = arg
+                    self.x = arg
                 elif a == 4:
-                    self.__y = arg
+                    self.y = arg
                 a += 1
 
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == "id":
                     if value is None:
-                        self.__init__(self.__width, self.__height, self.__x, self.__y)
+                        self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = value
-                    elif key == "width":
-                        self.__width = value
-                    elif key == "height":
-                        self.__height = value
-                    elif key == "x":
-                        self.__x = value
-                    elif key == "y":
-                        self.__y = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     def to_dictionary(self):
         """dictionary representation of a rectangle"""
-        recDict = {"id": self.id, "width": self.__width,
-                    "height": self.__height,
-                    "x": self.__x, "y": self.__y}
+        recDict = {"id": self.id, "width": self.width, "height": self.height,
+                    "x": self.x, "y": self.y}
         return recDict
