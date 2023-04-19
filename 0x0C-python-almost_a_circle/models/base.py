@@ -2,6 +2,7 @@
 """Module containing the first class base"""
 
 import json
+import csv
 import os
 
 
@@ -61,12 +62,12 @@ class Base:
         """method that returns a list of instances"""
         fileName = "{}.json".format(cls.__name__)
         ins = []
-        dictList = []
+        dict_list = []
 
         if os.path.exists(fileName):
             with open(fileName, 'r') as fn:
                 j_str = fn.read()
-                dictList = cls.from_json_string(j_str)
-                for dic in dictList:
+                dict_list = cls.from_json_string(j_str)
+                for dic in dict_list:
                     ins.append(cls.create(**dic))
         return ins
