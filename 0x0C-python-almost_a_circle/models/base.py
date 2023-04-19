@@ -23,6 +23,10 @@ class Base:
         """static method returning JSON representation"""
         if list_dictionaries is None or list_dictionaries == []:
             return []
+
+        if (type(list_dictionaries) != list or not
+                all(type(i) == dict for i in list_dictionaries)):
+            raise TypeError("list_dictionaries is not a list of dictionaries")
         else:
             return json.dumps(list_dictionaries)
 
