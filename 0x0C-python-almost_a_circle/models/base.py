@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Module containing the first class base"""
+
 import json
 import os
 
@@ -10,7 +11,7 @@ class Base:
 
     def __init__(self, id=None):
         """def of class constructor"""
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -51,6 +52,7 @@ class Base:
             dummyIns = cls(1, 1)
         elif cls.__name__ == "Square":
             dummyIns = cls(1)
+
         dummyIns.update(**dictionary)
         return dummyIns
 
