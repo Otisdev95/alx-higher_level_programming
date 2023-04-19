@@ -43,8 +43,7 @@ class Base:
         json_string_list = []
         if json_string is not None and json_string != "":
             json_string_list = json.loads(json_string)
-        else:
-            return json_string_list
+        return json_string_list
 
     @classmethod
     def create(cls, **dictionary):
