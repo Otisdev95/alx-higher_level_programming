@@ -1,14 +1,14 @@
 <h1>JavaScript - Warm up</h1>
 <p>JavaScript is used for many things. Here, i'll will use JavaScript for 2 reasons:</p>
 <ul>
-    <l1>Scripting (same as we did with Python)</li>
-    <l1>Web front-end</li>
+    <li>Scripting (same as we did with Python)</li>
+    <li>Web front-end</li>
 </ul>
 <p>For the moment, and for learning all basic concepts of this language, i will do some scripting. After that, i will make my AirBnB project dynamic by using Javascript and JQuery.</p>
 <h3>Learning Objectives</h3>
 <ul>
-    <l1>Why JavaScript programming is amazing</li>
-    <l1>How to run a JavaScript script</li>
+    <li>Why JavaScript programming is amazing</li>
+    <li>How to run a JavaScript script</li>
     <li>How to create variables and constants</li>
     <li>What are differences between var, const and let</li>
     <li>What are all the data types available in JavaScript</li>
