@@ -18,7 +18,8 @@
     <li>How to use while and for loops</li>
     <li>How to use break and continue statements</li>
     <li>What is a function and how do you use functions</li>
-    <li>What does a function that does not use any return statement return</li>
+    <li>What does a function that does not use any return</li>
+    <li>statement return</li>
     <li>Scope of variables</li>
     <li>What are the arithmetic operators and how to use them</li>
     <li>How to manipulate dictionary</li>
