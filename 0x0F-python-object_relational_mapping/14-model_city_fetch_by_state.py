@@ -24,7 +24,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    
     outcome = session.query(City, State).join(State)
 
     for city, state in outcome.all():
